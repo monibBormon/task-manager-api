@@ -30,7 +30,9 @@ mongoose.connect(DATABASE,{autoIndex:true}).then(()=>{
     console.log("MongoDB disconnected");
 })
 
-
+app.use("/",(req,res)=>{
+    res.send("App is running")
+})
 app.use("/api",router)
 
 
